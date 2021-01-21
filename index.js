@@ -1287,7 +1287,7 @@ async function starts() {
                                         if (!isUser) return reply(mess.only.daftarB)
 					tels = body.slice(7)
 					anu = await fetchJson(`https://scrap.terhambar.com/lirik?word=${tels}`, {method: 'get'})
-					reply('*Lirik lagu* 🎶'+teks+' 🎶 :\n\n\n'+anu.result.lirik)
+					reply('*Lirik lagu* 🎶'+tels+' 🎶 :\n\n\n'+anu.result.lirik)
 					break
 				case 'igstalk':
 					if (!isUser) return reply(mess.only.daftarB)
