@@ -1,17 +1,19 @@
 const help = (prefix, ownerBot, botName) => {
         return `
-「 *${botName}* 」
+「 *AINE BOT* 」
 
 ◪ *INFO*
   ❏ Prefix: 「  ${prefix}  」
-  ❏ Creator: ${ownerBot}
+  ❏ Creator: Muhammad Ridwan Reynaldy
 ◪ *ABOUT*
   │
   ├─ ❏ ${prefix}info
+  ├─ ❏ ${prefix}snk
+  ├─ ❏ ${prefix}lpr
   ├─ ❏ ${prefix}blocklist
   ├─ ❏ ${prefix}chatlist
   ├─ ❏ ${prefix}ping
-  └─ ❏ ${prefix}bugreport
+  └─ ❏ ${prefix}gcainebot
 ◪ *MENU*
   │
   ├─ ❏ ${prefix}logomakermenu
