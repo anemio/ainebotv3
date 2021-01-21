@@ -19,20 +19,6 @@
 
 ---
 
-## Information
-- Change vcard contacts name on [this section](https://github.com/NazwaS/termux-whatsapp-bot/blob/main/index.js#L78)
-- Change vcard bot name on [this section](https://github.com/NazwaS/termux-whatsapp-bot/blob/main/index.js#L79)
-- Change vcard WhatsApp id on [this section](https://github.com/NazwaS/termux-whatsapp-bot/blob/main/index.js#L35)
-- Change vcard WhatsApp number on [this section](https://github.com/NazwaS/termux-whatsapp-bot/blob/main/index.js#L80)
-- Change owner number id on [this section](https://github.com/NazwaS/termux-whatsapp-bot/blob/main/index.js#L80)
-- Change menu on [this section](https://github.com/NazwaS/termux-whatsapp-bot/blob/main/src/help.js)
-- Change BarBarKey on [this section](https://github.com/NazwaS/termux-whatsapp-bot/blob/main/index.js#L289)
-
----
-
-- Get BarBarKey on [this site](https://mhankbarbar.tech)
-
----
 
 ## Install
 Follow The Steps Below!
@@ -238,15 +224,3 @@ Follow The Steps Below!
 
 ---
 
-<img src="https://raw.githubusercontent.com/NazwaS/NazwaS/main/img/tenor.gif">
-
----
-
-## Special Thanks To
-
-- [@adiwajshing/baileys](https://github.com/adiwajshing/Baileys) 
-- [RyzRdy](https://github.com/RyzRdy)
-- [Paritsod](https://github.com/Paritsod)
-- [mrfzvx12](https://github.com/mrfzvx12)
-- [Mr-hadi](https://github.com/Mr-hadi)
-- [MhankBarBar](https://github.com/mhankbarbar)
