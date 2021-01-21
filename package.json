@@ -17,7 +17,7 @@
     "whatsapp",
     "bot"
   ],
-  "author": "NazwaS",
+  "author": "anemio",
   "license": "ISC",
   "dependencies": {
     "@adiwajshing/baileys": "github:adiwajshing/baileys",
@@ -40,10 +40,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NazwaS/termux-whatsapp-bot.git"
+    "url": "git+https://github.com/anemio/ainebotv3.git"
   },
   "bugs": {
-    "url": "https://github.com/NazwaS/termux-whatsapp-bot/issues"
+    "url": "https://github.com/anemio/ainebotv3/issues"
   },
-  "homepage": "https://github.com/NazwaS/termux-whatsapp-bot#readme"
+  "homepage": "https://github.com/anemio/ainebotv3#readme"
 }
