@@ -23,6 +23,7 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}bplogo
   ├─ ❏ ${prefix}text3d
   ├─ ❏ ${prefix}quotemaker
+  ├─ ❏ ${prefix}magernulis
   ├─ ❏ ${prefix}marvellogo ❌
   ├─ ❏ ${prefix}snowwrite ❌
   ├─ ❏ ${prefix}ninjalogo ❌
@@ -59,8 +60,9 @@ const help = (prefix) => {
 ◪ *EDUCATION*
   │
   ├─ ❏ ${prefix}wiki
-  ├─ ❏ ${prefix}wikien
-  ├─ ❏ ${prefix}nulis
+  ├─ ❏ ${prefix}katabijak
+  ├─ ❏ ${prefix}pantun
+  ├─ ❏ ${prefix}tafsirmimpi
   ├─ ❏ ${prefix}quotes
   ├─ ❏ ${prefix}quotes2
   └─ ❏ ${prefix}artinama
@@ -84,51 +86,45 @@ const help = (prefix) => {
 ◪ *RANDOM PICTUE*
   │ *ANIME*
   ├─ ❏ ${prefix}loli
-  ├─ ❏ ${prefix}
-  ├─ ❏ ${prefix}
-  ├─ ❏ ${prefix}
+  ├─ ❏ ${prefix}neko
+  ├─ ❏ ${prefix}waifu
+  ├─ ❏ ${prefix}animecry
+  ├─ ❏ ${prefix}animehug
+  ├─ ❏ ${prefix}osakana
+  ├─ ❏ ${prefix}naruto
+  ├─ ❏ ${prefix}animegirl
+  ├─ ❏ ${prefix}animeboy
+  ├─ ❏ ${prefix}nekonime
+  ├─ ❏ ${prefix}randomanime
   │
+  │ *CARTOON*
+  ├─ ❏ ${prefix}doraemon
+  ├─ ❏ ${prefix}pokemon
   │
-  ├─ ❏ ${prefix}
-  ├─ ❏ ${prefix}
-  ├─ ❏ ${prefix}
-  ├─ ❏ ${prefix}
-  ├─ ❏ ${prefix}
+  │ *ANIMAL*
+  ├─ ❏ ${prefix}anjing
+  ├─ ❏ ${prefix}kucing
+  ├─ ❏ ${prefix}hamster
+  ├─ ❏ ${prefix}kelinci
   │
+  │ *TRANSPORT*
+  ├─ ❏ ${prefix}mobil
+  ├─ ❏ ${prefix}motor
+  ├─ ❏ ${prefix}sepeda
   │
-  ├─ ❏ ${prefix}
-  ├─ ❏ ${prefix}
-  ├─ ❏ ${prefix}
-  ├─ ❏ ${prefix}
-  ├─ ❏ ${prefix}  
+  │ *AESTHETIC*
+  ├─ ❏ ${prefix}blusky
+  ├─ ❏ ${prefix}flower
+  ├─ ❏ ${prefix}icecream
+  ├─ ❏ ${prefix}pemandangan
   │
-  │
-  ├─ ❏ ${prefix}
-  ├─ ❏ ${prefix}
-  ├─ ❏ ${prefix}
-  ├─ ❏ ${prefix}
-  ├─ ❏ ${prefix}
-  │
-  │
-  ├─ ❏ ${prefix}
-  ├─ ❏ ${prefix}
-  ├─ ❏ ${prefix}
-  ├─ ❏ ${prefix}
-  ├─ ❏ ${prefix}
-  │
-  │
-  ├─ ❏ ${prefix}
-  ├─ ❏ ${prefix}
-  ├─ ❏ ${prefix}
-  ├─ ❏ ${prefix}
-  ├─ ❏ ${prefix}
-  │
-  │
-  ├─ ❏ ${prefix}
-  ├─ ❏ ${prefix}
-  ├─ ❏ ${prefix}
-  ├─ ❏ ${prefix}
-  ├─ ❏ ${prefix}
+  │ *QUOTES*
+  ├─ ❏ ${prefix}quotesid
+  ├─ ❏ ${prefix}quotesen
+  ├─ ❏ ${prefix}katakata
+  ├─ ❏ ${prefix}motivasi
+  ├─ ❏ ${prefix}kehidupan
+  └─ ❏ ${prefix}islami
 ◪ *GROUP*
   │
   ├─ ❏ ${prefix}opengc
@@ -143,7 +139,7 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}add
   ├─ ❏ ${prefix}kick
   ├─ ❏ ${prefix}listadmins
-  ├─ ❏ ${prefix}linkgroup
+  ├─ ❏ ${prefix}linkgc
   ├─ ❏ ${prefix}leave
   ├─ ❏ ${prefix}welcome
   ├─ ❏ ${prefix}nsfw
@@ -170,26 +166,19 @@ const help = (prefix) => {
 ◪ *WIBU*
   │
   ├─ ❏ ${prefix}neonime
-  ├─ ❏ ${prefix}pokemon
-  ├─ ❏ ${prefix}waifu
-  ├─ ❏ ${prefix}randomanime
   ├─ ❏ ${prefix}husbu
   ├─ ❏ ${prefix}husbu2
   ├─ ❏ ${prefix}wait
-  └─ ❏ ${prefix}nekonime
 ◪ *18+*
   |
   ├─ ❏ ${prefix}randomhentai
-  ├─ ❏ ${prefix}nsfwtrap
   └─ ❏ ${prefix}nsfwneko
 ◪ *FUN*
   │
-  ├─ ❏ ${prefix}alay
   ├─ ❏ ${prefix}gantengcek
+  ├─ ❏ ${prefix}cantikcek
   ├─ ❏ ${prefix}watak
   ├─ ❏ ${prefix}hobby
-  ├─ ❏ ${prefix}game
-  ├─ ❏ ${prefix}bucin
   ├─ ❏ ${prefix}trust
   ├─ ❏ ${prefix}dare
   └─ ❏ ${prefix}simi
@@ -198,9 +187,11 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}bahasa
   ├─ ❏ ${prefix}kodenegara
   ├─ ❏ ${prefix}kbbi
-  ├─ ❏ ${prefix}fakta
+  ├─ ❏ ${prefix}faktaunik
+  ├─ ❏ ${prefix}map
   ├─ ❏ ${prefix}infocuaca
   ├─ ❏ ${prefix}infogempa
+  ├─ ❏ ${prefix}infonomor
   ├─ ❏ ${prefix}jadwaltvnow
   └─ ❏ ${prefix}covid
 ◪ *OWNER*
@@ -208,14 +199,17 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}setprefix
   ├─ ❏ ${prefix}block
   ├─ ❏ ${prefix}bc
+  ├─ ❏ ${prefix}bc1
+  ├─ ❏ ${prefix}bc2
   ├─ ❏ ${prefix}bcgc
+  ├─ ❏ ${prefix}bcgc1
+  ├─ ❏ ${prefix}bcgc2
   ├─ ❏ ${prefix}clone
   └─ ❏ ${prefix}clearall
 ◪ *OTHER*
   │
   ├─ ❏ ${prefix}send
   ├─ ❏ ${prefix}wame
-  ├─ ❏ ${prefix}exe
   ├─ ❏ ${prefix}qrcode
   ├─ ❏ ${prefix}afk
   ├─ ❏ ${prefix}timer
