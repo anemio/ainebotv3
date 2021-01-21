@@ -27,8 +27,8 @@ Follow The Steps Below!
 > termux-setup-storage
 (after that tap on permission)
 > apt install git -y
-> git clone https://github.com/NazwaS/termux-whatsapp-bot
-> cd termux-whatsapp-bot
+> git clone https://github.com/anemio/ainebotv1
+> cd ainebotv3
 > bash install.sh
 ```
 
