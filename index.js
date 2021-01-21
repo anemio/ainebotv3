@@ -1,14 +1,3 @@
-/*
-* Tambahin nama author lah
-* Author nya Radya, Farid, M.hadi.firmansya, and Nazwa
-* Tambahin ya zhayank
-* Jan numpang nama doank
-* Baca readme nya biar gk tanya tanya
-
-- What's New?
-* Added New Features
-*/
-
 const {
     WAConnection,
     MessageType,
@@ -73,19 +62,19 @@ const { othermenu } require('./database/menu/othermenu')*/
 /******END OF MENU INPUT******/
 
 /******LOAD OF VCARD INPUT******/
-const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
+const vcard = 'BEGIN:VCARD\n' 
             + 'VERSION:3.0\n' 
-            + 'FN:Nazwa🖤\n' // full name
-            + 'ORG:Owner Bot;\n' // the organization of the contact
-            + 'TEL;type=CELL;type=VOICE;waid=12542123926:+1 (254) 212-3926\n' // WhatsApp ID + phone number
+            + 'FN:Admin Ainebot\n' 
+            + 'ORG: Pengembang AINEBOT;\n' 
+            + 'TEL;type=CELL;type=VOICE;waid=62895330379186:+62 895-3303-79186\n' 
             + 'END:VCARD'
 /******END OF VCARD INPUT******/
 
-prefix = '.'
+prefix = '!'
 blocked = []
 
 /******BEGIN OF FUNCTIONS INPUT******/
-const getLevelingXp = (userId) => {
+        const getLevelingXp = (userId) => {
             let position = false
             Object.keys(_level).forEach((i) => {
                 if (_level[i].jid === userId) {
@@ -170,10 +159,10 @@ async function starts() {
 	client.logger.level = 'warn'
 	console.log(banner.string)
 	client.on('qr', () => {
-		console.log(color('[','white'), color('!','red'), color(']','white'), color(' Scan the qr code above'))
+		console.log(color('[','white'), color('!','red'), color(']','white'), color(' QR code is ready, Scan now..'))
 	})
 
-	fs.existsSync('./Nazwa.json') && client.loadAuthInfo('./Nazwa.json')
+	fs.existsSync('./Aine.json') && client.loadAuthInfo('./Aine.json')
 	client.on('connecting', () => {
 		start('2', 'Connecting...')
 	})
@@ -181,7 +170,7 @@ async function starts() {
 		success('2', 'Connected')
 	})
 	await client.connect({timeoutMs: 30*1000})
-        fs.writeFileSync('./Nazwa.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
+        fs.writeFileSync('./Aine.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
 
 	client.on('group-participants-update', async (anu) => {
 		if (!welkom.includes(anu.jid)) return
@@ -195,7 +184,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `Halo @${num.split('@')[0]}\nSelamat datang di group *${mdata.subject}*`
+				teks = `*Hallo* 👋 @${num.split('@')[0]}\nSelamat datang di group *${mdata.subject}*\nSemoga betah ya di sini 😅\nJangan lupa intro @${num.split('@')[0]} 😅*`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
@@ -205,7 +194,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `Sayonara @${num.split('@')[0]}👋`
+				teks = `*Titip salam yah kak* @${num.split('@')[0]}\n*I will miss you* 🤭`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -243,28 +232,28 @@ async function starts() {
 			const isCmd = body.startsWith(prefix)
 
 			mess = {
-				wait: '⌛ Sedang di Prosess ⌛',
-				success: '✔️ Berhasil ✔️',
-                                levelon: '❬ ✔ ❭ *enable leveling*',
-				leveloff: ' ❬ X ❭  *disable leveling*',
-				levelnoton: '❬ X ❭ *leveling not aktif*',
+				wait: '⌛ *(WAIT) Sedang di Prosess*',
+				success: '✔️ *Berhasil*',
+                                levelon: '❬ ✔ ❭ *Enable leveling*',
+				leveloff: '❬ X ❭  *Disable leveling*',
+				levelnoton: '❬ X ❭ *Leveling not aktif*',
 				levelnol: '*LEVEL KAKAK MASIH* 0 °-°',
 				error: {
-					stick: '[❗] Gagal, terjadi kesalahan saat mengkonversi gambar ke sticker ❌',
-					Iv: '❌ Link tidak valid ❌'
+					stick: '[❗] Gagal, terjadi kesalahan saat mengkonversi gambar ke sticker',
+					Iv: '❌ Link tidak valid'
 				},
 				only: {
-					group: '[❗] Perintah ini hanya bisa di gunakan dalam group! ❌',
-					ownerG: '[❗] Perintah ini hanya bisa di gunakan oleh owner group! ❌',
-					ownerB: '[❗] Perintah ini hanya bisa di gunakan oleh owner bot! ❌',
-					admin: '[❗] Perintah ini hanya bisa di gunakan oleh admin group! ❌',
-					Badmin: '[❗] Perintah ini hanya bisa di gunakan ketika bot menjadi admin! ❌',
+					group: '[❗] *Perintah ini hanya bisa di gunakan dalam group!*',
+					ownerG: '[❗] *Perintah ini hanya bisa di gunakan oleh owner group!*',
+					ownerB: '[❗] *Perintah ini hanya bisa di gunakan oleh owner bot!*',
+					admin: '[❗] *Perintah ini hanya bisa di gunakan oleh admin group!*',
+					Badmin: '[❗] *Perintah ini hanya bisa di gunakan ketika bot menjadi admin!*',
                                         daftarB: `──「 DAFTAR 」──\nHalo kak !\nKamu belum Terdaftar didalam database, \n\nCommand : ${prefix}daftar nama|umur\nContoh : ${prefix}daftar Ryz|17`,
 				}
 			}
     			const apakah = ['Ya','Tidak']
         		const bisakah = ['Bisa','Tidak Bisa']
-		        const kapankah = ['Hari Lagi','Minggu Lagi','Bulan Lagi','Tahun Lagi']
+		        const kapankah = ['1 Hari','1 Minggu','1 Bulan','1 Tahun']
 			const botNumber = client.user.jid
 			const ownerNumber = ["12542123926@s.whatsapp.net"] // replace this with your number
 			const nomorOwner = [ownerNumber]
