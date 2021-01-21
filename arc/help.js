@@ -4,51 +4,54 @@ const help = (prefix) => {
 
 ◪ *INFO*
   ❏ Prefix: 「  ${prefix}  」
-  ❏ Creator: OWNER_NAME
+  ❏ Owner: Muhammad Ridwan Reynaldy
 ◪ *ABOUT*
   │
   ├─ ❏ ${prefix}info
+  ├─ ❏ ${prefix}snk
   ├─ ❏ ${prefix}blocklist
   ├─ ❏ ${prefix}chatlist
   ├─ ❏ ${prefix}ping
-  └─ ❏ ${prefix}bugreport
+  ├─ ❏ ${prefix}gcainebot
+  └─ ❏ ${prefix}lpr
 ◪ *MAKER*
   │
   ├─ ❏ ${prefix}sticker
   ├─ ❏ ${prefix}stickergif
   ├─ ❏ ${prefix}toimg
   ├─ ❏ ${prefix}tomp3
-  ├─ ❏ ${prefix}bpink
-  ├─ ❏ ${prefix}marvellogo
-  ├─ ❏ ${prefix}snowwrite
-  ├─ ❏ ${prefix}3dtext
-  ├─ ❏ ${prefix}ninjalogo
-  ├─ ❏ ${prefix}water
-  ├─ ❏ ${prefix}firetext
-  ├─ ❏ ${prefix}logowolf
-  ├─ ❏ ${prefix}logowolf2
+  ├─ ❏ ${prefix}bplogo
   ├─ ❏ ${prefix}phlogo
-  ├─ ❏ ${prefix}glitch
-  ├─ ❏ ${prefix}neonlogo
-  ├─ ❏ ${prefix}neonlogo2
-  ├─ ❏ ${prefix}lionlogo
-  ├─ ❏ ${prefix}jokerlogo
-  ├─ ❏ ${prefix}shadow
-  ├─ ❏ ${prefix}burnpaper
-  ├─ ❏ ${prefix}coffee
-  ├─ ❏ ${prefix}lovepaper
-  ├─ ❏ ${prefix}woodblock
-  ├─ ❏ ${prefix}qowheart
-  ├─ ❏ ${prefix}mutgrass
-  ├─ ❏ ${prefix}undergocean
-  ├─ ❏ ${prefix}woodenboards
-  ├─ ❏ ${prefix}wolfmetal
-  ├─ ❏ ${prefix}metalictglow
-  ├─ ❏ ${prefix}8bit
-  ├─ ❏ ${prefix}ttp
-  ├─ ❏ ${prefix}herrypotter
-  ├─ ❏ ${prefix}pubglogo
-  └─ ❏ ${prefix}quotemaker
+  ├─ ❏ ${prefix}text3d
+  ├─ ❏ ${prefix}quotemaker
+  ├─ ❏ ${prefix}magernulis
+  ├─ ❏ ${prefix}marvellogo ❌ 
+  ├─ ❏ ${prefix}snowwrite ❌
+  ├─ ❏ ${prefix}ninjalogo ❌
+  ├─ ❏ ${prefix}water ❌
+  ├─ ❏ ${prefix}firetext ❌
+  ├─ ❏ ${prefix}logowolf ❌
+  ├─ ❏ ${prefix}logowolf2 ❌
+  ├─ ❏ ${prefix}glitch ❌
+  ├─ ❏ ${prefix}neonlogo ❌
+  ├─ ❏ ${prefix}neonlogo2 ❌
+  ├─ ❏ ${prefix}lionlogo ❌
+  ├─ ❏ ${prefix}jokerlogo ❌
+  ├─ ❏ ${prefix}shadow ❌
+  ├─ ❏ ${prefix}burnpaper ❌
+  ├─ ❏ ${prefix}coffee ❌
+  ├─ ❏ ${prefix}lovepaper ❌
+  ├─ ❏ ${prefix}woodblock ❌
+  ├─ ❏ ${prefix}qowheart ❌
+  ├─ ❏ ${prefix}mutgrass ❌
+  ├─ ❏ ${prefix}undergocean ❌
+  ├─ ❏ ${prefix}woodenboards ❌
+  ├─ ❏ ${prefix}wolfmetal ❌
+  ├─ ❏ ${prefix}metalictglow ❌
+  ├─ ❏ ${prefix}8bit ❌
+  ├─ ❏ ${prefix}ttp ❌
+  ├─ ❏ ${prefix}herrypotter ❌
+  └─ ❏ ${prefix}pubglogo ❌
 ◪ *MEDIA*
   │
   ├─ ❏ ${prefix}trendtwit
@@ -64,6 +67,8 @@ const help = (prefix) => {
   └─ ❏ ${prefix}artinama
 ◪ *KERANG AJAIB*
   │
+  ├─ ❏ ${prefix}gantengcek
+  ├─ ❏ ${prefix}cantikcek
   ├─ ❏ ${prefix}apakah
   ├─ ❏ ${prefix}kapankah
   ├─ ❏ ${prefix}rate
@@ -75,10 +80,52 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}ytmp4
   ├─ ❏ ${prefix}tiktok
   └─ ❏ ${prefix}joox
-◪ *MEME*
-  │
+◪ *RANDOM PICTURE*
+  │ *MEME*
   ├─ ❏ ${prefix}meme
-  └─ ❏ ${prefix}memeindo
+  ├─ ❏ ${prefix}memeindo
+  │
+  │ *CARTOON*
+  ├─ ❏ ${prefix}pokemon
+  ├─ ❏ ${prefix}doraemon
+  │
+  │ *ANIMAL*
+  ├─ ❏ ${prefix}anjing
+  ├─ ❏ ${prefix}kucing
+  ├─ ❏ ${prefix}hamster
+  ├─ ❏ ${prefix}kelinci
+  │
+  │ *TRANSPORT*
+  ├─ ❏ ${prefix}mobil
+  ├─ ❏ ${prefix}motor
+  ├─ ❏ ${prefix}sepeda
+  │
+  │ *AESTHETIC*
+  ├─ ❏ ${prefix}bluesky
+  ├─ ❏ ${prefix}flower
+  ├─ ❏ ${prefix}icecream
+  │
+  │ *ANIME*
+  ├─ ❏ ${prefix}loli
+  ├─ ❏ ${prefix}neko
+  ├─ ❏ ${prefix}waifu
+  ├─ ❏ ${prefix}rdmanime
+  ├─ ❏ ${prefix}animecry
+  ├─ ❏ ${prefix}animehug
+  ├─ ❏ ${prefix}nekonime
+  ├─ ❏ ${prefix}naruto
+  ├─ ❏ ${prefix}animegirl
+  ├─ ❏ ${prefix}animeboy
+  ├─ ❏ ${prefix}osakana
+  │
+  │ *QUOTES*
+  ├─ ❏ ${prefix}quotesid
+  ├─ ❏ ${prefix}quotesen
+  ├─ ❏ ${prefix}katakata
+  ├─ ❏ ${prefix}motivasi
+  ├─ ❏ ${prefix}kehidupan
+  ├─ ❏ ${prefix}islami
+  ├─ ❏ ${prefix}quotesanime
 ◪ *GROUP*
   │
   ├─ ❏ ${prefix}opengc
@@ -90,18 +137,18 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}tagall3
   ├─ ❏ ${prefix}tagall4
   ├─ ❏ ${prefix}tagall5
-  ├─ ❏ ${prefix}add
-  ├─ ❏ ${prefix}kick
+  ├─ ❏ ${prefix}add [6288]
+  ├─ ❏ ${prefix}kick [@tag]
   ├─ ❏ ${prefix}listadmins
   ├─ ❏ ${prefix}linkgroup
   ├─ ❏ ${prefix}leave
-  ├─ ❏ ${prefix}welcome
-  ├─ ❏ ${prefix}nsfw
+  ├─ ❏ ${prefix}welcome [1/0]
+  ├─ ❏ ${prefix}nsfw [1/0]
   ├─ ❏ ${prefix}leveling
   ├─ ❏ ${prefix}level
   ├─ ❏ ${prefix}delete
-  ├─ ❏ ${prefix}simih
-  └─ ❏ ${prefix}ownergroup
+  ├─ ❏ ${prefix}simih [1/0]
+  └─ ❏ ${prefix}ownergc
 ◪ *SOUND*
   │
   ├─ ❏ ${prefix}play
@@ -120,26 +167,20 @@ const help = (prefix) => {
 ◪ *WIBU*
   │
   ├─ ❏ ${prefix}neonime
-  ├─ ❏ ${prefix}pokemon
-  ├─ ❏ ${prefix}loli
-  ├─ ❏ ${prefix}waifu
-  ├─ ❏ ${prefix}randomanime
   ├─ ❏ ${prefix}husbu
   ├─ ❏ ${prefix}husbu2
   ├─ ❏ ${prefix}wait
-  └─ ❏ ${prefix}nekonime
 ◪ *18+*
   |
   ├─ ❏ ${prefix}randomhentai
-  ├─ ❏ ${prefix}nsfwtrap
+  ├─ ❏ ${prefix}nsfwtrap ❌
   └─ ❏ ${prefix}nsfwneko
 ◪ *FUN*
   │
-  ├─ ❏ ${prefix}alay
-  ├─ ❏ ${prefix}gantengcek
+  ├─ ❏ ${prefix}alay ❌
   ├─ ❏ ${prefix}watak
   ├─ ❏ ${prefix}hobby
-  ├─ ❏ ${prefix}game
+  ├─ ❏ ${prefix}game ❌
   ├─ ❏ ${prefix}bucin
   ├─ ❏ ${prefix}trust
   ├─ ❏ ${prefix}dare
@@ -157,6 +198,7 @@ const help = (prefix) => {
 ◪ *OWNER*
   │
   ├─ ❏ ${prefix}setprefix
+  ├─ ❏ ${prefix}setppbot
   ├─ ❏ ${prefix}block
   ├─ ❏ ${prefix}bc
   ├─ ❏ ${prefix}bcgc
@@ -164,16 +206,14 @@ const help = (prefix) => {
   └─ ❏ ${prefix}clearall
 ◪ *OTHER*
   │
-  ├─ ❏ ${prefix}send
   ├─ ❏ ${prefix}wame
-  ├─ ❏ ${prefix}virtex
   ├─ ❏ ${prefix}exe
   ├─ ❏ ${prefix}qrcode
   ├─ ❏ ${prefix}afk
   ├─ ❏ ${prefix}timer
   ├─ ❏ ${prefix}fml
   └─ ❏ ${prefix}fml2
-◪ *OWNER_NAME2*
+◪ *POWERED BY AINEBOT*
 `
 }
 
