@@ -257,7 +257,7 @@ async function starts() {
 					ownerB: '[❗] *Perintah ini hanya bisa di gunakan oleh owner bot!*',
 					admin: '[❗] *Perintah ini hanya bisa di gunakan oleh admin group!*',
 					Badmin: '[❗] *Perintah ini hanya bisa di gunakan ketika bot menjadi admin!*',
-                                        daftarB: `──「 DAFTAR 」──\nHalo kak !\nKamu belum Terdaftar didalam database, \n\nCommand : ${prefix}daftar nama|umur\nContoh : ${prefix}daftar Ryz|17`,
+                                        daftarB: `Hubungi owner kami jika ingin mendaftar! wa.me/62895330379186`,
 				}
 			}
 			const botNumber = client.user.jid
@@ -527,26 +527,26 @@ async function starts() {
 					hasil = data.logs
 					reply(hasil)
 					break
-			case 'map':
-					data = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slice(5)}`)
-					if (!isUser) return reply(mess.only.daftarB)
-					hasil = await getBuffer(data.gambar)
-					client.sendMessage(from, hasil, image, {quoted: mek, caption: `Hasil Dari *${body.slice(5)}*`})
+		        case 'map':
+					anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slice(5)}`, {method: 'get'})
+                                        if (!isUser) return reply(mess.only.daftarB)
+					buffer = await getBuffer(anu.gambar)
+					client.sendMessage(from, buffer, image, {quoted: mek, caption: `${body.slice(5)}`})
 					break
 			case 'covid':
-			case 'covidcountry':
-					client.updatePresence(from, Presence.composing) 
-					if (!isUser) return reply(mess.only.daftarB)
-					data = await fetchJson(`https://arugaz.my.id/api/corona?country=${body.slice(7)}`)
-					if (data.result) reply(data.result)
-					hasil = `Negara : ${data.result.country}\n\nActive : ${data.result.active}\ncasesPerOneMillion : ${data.result.casesPerOneMillion}\ncritical : ${data.result.critical}\ndeathsPerOneMillion : ${data.result.deathsPerOneMillion}\nrecovered : ${data.result.recovered}\ntestPerOneMillion : ${data.result.testPerOneMillion}\ntodayCases : ${data.result.todayCases}\ntodayDeath : ${data.result.todayDeath}\ntotalCases : ${data.result.totalCases}\ntotalTest : ${data.result.totalTest}`
-					reply(hasil)
-					break
+                   case 'covidcountry':
+                   client.updatePresence(from, Presence.composing) 
+                   if (!isUser) return reply(mess.only.daftarB)
+                   data = await fetchJson(`https://arugaz.my.id/api/corona?country=${body.slice(7)}`)
+                   if (data.result) reply(data.result)
+                   hasil = `Negara : ${data.result.country}\n\nActive : ${data.result.active}\ncasesPerOneMillion : ${data.result.casesPerOneMillion}\ncritical : ${data.result.critical}\ndeathsPerOneMillion : ${data.result.deathsPerOneMillion}\nrecovered : ${data.result.recovered}\ntestPerOneMillion : ${data.result.testPerOneMillion}\ntodayCases : ${data.result.todayCases}\ntodayDeath : ${data.result.todayDeath}\ntotalCases : ${data.result.totalCases}\ntotalTest : ${data.result.totalTest}`
+                   reply(hasil)
+                   break
 			case 'wiki':
 					if (args.length < 1) return reply('masukan kata kunci kak')
 					tels = body.slice(6)	
                                         if (!isUser) return reply(mess.only.daftarB)				
-					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/wiki?q=${tels}&apikey=BotWeA`, {method: 'get'})
+					anu = await fetchJson(`https://alfians-api.herokuapp.com/api/wiki?q=${tels}`, {method: 'get'})
 					reply(anu.result.extract)
 					break	
 			case 'wikien':
@@ -1692,28 +1692,24 @@ async function starts() {
 					client.sendMessage(from, buff, image, {quoted: mek})
 					break
                                 case 'gantengcek':
-					if (isUser) return reply(mess.only.daftarB)
 					ganteng = body.slice(1)
 					const gan =['10','30','20','40','50','60','70','62','74','83','97','100','29','94','75','82','41','39']
 					const teng = gan[Math.floor(Math.random() * gan.length)]
 					client.sendMessage(from, 'Pertanyaan : *'+ganteng+'*\n\nJawaban : '+ teng+'%', text, { quoted: mek })
 					break
-					case 'cantikcek':
-					if (isUser) return reply(mess.only.daftarB)
+				case 'cantikcek':
 					cantik = body.slice(1)
 					const can =['10','30','20','40','50','60','70','62','74','83','97','100','29','94','75','82','41','39']
 					const tik = can[Math.floor(Math.random() * can.length)]
 					client.sendMessage(from, 'Pertanyaan : *'+cantik+'*\n\nJawaban : '+ tik+'%', text, { quoted: mek })
 					break
 				case 'watak':
-				        if (isUser) return reply(mess.only.daftarB)
 					watak = body.slice(1)
 					const wa =['Penyayang','Pemurah','Pemarah','Pemaaf','Penurut','Baik','Baperan','Baik Hati','penyabar','UwU','top deh, pokoknya','Suka Membantu']
 					const tak = wa[Math.floor(Math.random() * wa.length)]
 					client.sendMessage(from, 'Pertanyaan : *'+watak+'*\n\nJawaban : '+ tak, text, { quoted: mek })
 				        break
 				case 'hobby':
-				        if (isUser) return reply(mess.only.daftarB)
 					hobby = body.slice(1)
 					const hob =['Memasak','Membantu Atok','Mabar','Nobar','Sosmedtan','Membantu Orang lain','Nonton Anime','Nonton Drakor','Naik Motor','Nyanyi','Menari','Bertumbuk','Menggambar','Foto fotoan Ga jelas','Maen Game','Berbicara Sendiri']
 					const by = hob[Math.floor(Math.random() * hob.length)]
@@ -1988,6 +1984,7 @@ async function starts() {
                                 case 'jsholat':
                                         if (!isUser) return reply(mess.only.daftarB)
                                         tels = body.slice(8)
+                                        if (args.length < 1) return reply('Daerahnya dimana kak?')
 					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/jadwalshalat?q=${tels}&apikey=BotWeA`, {method: 'get'})
 					buffer = `*Ashar* ${anu.result.ashar}\n*dzuhur* ${anu.result.dzuhur}\n*Isha* ${anu.result.isha}\n*Maghrib* ${anu.result.maghrib}\n*Subuh* ${anu.result.subuh}`
 					client.sendMessage(from, buffer, text, {quoted: mek})
