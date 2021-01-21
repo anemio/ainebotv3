@@ -64,6 +64,10 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}nulis
   ├─ ❏ ${prefix}quotes
   ├─ ❏ ${prefix}quotes2
+  ├─ ❏ ${prefix}faktaunik
+  ├─ ❏ ${prefix}katabijak
+  ├─ ❏ ${prefix}pantun
+  ├─ ❏ ${prefix}tafsirmimpi
   └─ ❏ ${prefix}artinama
 ◪ *KERANG AJAIB*
   │
@@ -181,7 +185,7 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}watak
   ├─ ❏ ${prefix}hobby
   ├─ ❏ ${prefix}game ❌
-  ├─ ❏ ${prefix}bucin
+  ├─ ❏ ${prefix}bucin ❌
   ├─ ❏ ${prefix}trust
   ├─ ❏ ${prefix}dare
   └─ ❏ ${prefix}simi
@@ -190,7 +194,6 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}bahasa
   ├─ ❏ ${prefix}kodenegara
   ├─ ❏ ${prefix}kbbi
-  ├─ ❏ ${prefix}fakta
   ├─ ❏ ${prefix}infocuaca
   ├─ ❏ ${prefix}infogempa
   ├─ ❏ ${prefix}jadwaltvnow
