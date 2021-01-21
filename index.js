@@ -1772,7 +1772,7 @@ async function starts() {
 					gatauda = body.slice(8)					
 					anu = await fetchJson(`https://arugaz.my.id/api/random/text/quotes`, {method: 'get'})
 					reply(anu.result.quotes)
-					break	
+					break	 
 				case 'faktaunik':
                                         if (!isUser) return reply(mess.only.daftarB)
 					gatauda = body.slice(8)					
