@@ -1,6 +1,6 @@
 const help = (prefix) => {
 	return `
-「 *BOT_NAME* 」
+「 *AINE BOT* 」
 
 ◪ *INFO*
   ❏ Prefix: 「  ${prefix}  」
