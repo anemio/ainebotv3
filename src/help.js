@@ -59,6 +59,7 @@ const help = (prefix) => {
   └─ ❏ ${prefix}ytsearch
 ◪ *EDUCATION*
   │
+  ├─ ❏ ${prefix}ssweb
   ├─ ❏ ${prefix}wiki
   ├─ ❏ ${prefix}katabijak
   ├─ ❏ ${prefix}pantun
