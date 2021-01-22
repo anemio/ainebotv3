@@ -23,6 +23,7 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}bplogo
   ├─ ❏ ${prefix}text3d
   ├─ ❏ ${prefix}thunder
+  ├─ ❏ ${prefix}glitch
   ├─ ❏ ${prefix}cloudsky
   ├─ ❏ ${prefix}quotemaker
   ├─ ❏ ${prefix}magernulis
@@ -34,8 +35,6 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}logowolf ❌
   ├─ ❏ ${prefix}logowolf2 ❌
   ├─ ❏ ${prefix}phlogo ❌
-  ├─ ❏ ${prefix}glitch ❌
-  ├─ ❏ ${prefix}neonlogo ❌
   ├─ ❏ ${prefix}neonlogo2 ❌
   ├─ ❏ ${prefix}lionlogo ❌
   ├─ ❏ ${prefix}jokerlogo ❌
@@ -181,6 +180,7 @@ const help = (prefix) => {
   │
   ├─ ❏ ${prefix}gantengcek
   ├─ ❏ ${prefix}cantikcek
+  ├─ ❏ ${prefix}alay
   ├─ ❏ ${prefix}watak
   ├─ ❏ ${prefix}hobby
   ├─ ❏ ${prefix}trust
