@@ -621,7 +621,7 @@ async function starts() {
 					ranp = getRandom('.png')
 					rano = getRandom('.webp')
 					teks = body.slice(8).trim()
-					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/emoji2png?emoji=${teks}`, {method: 'get'})
+					anu = await fetchJson(`https://api.zeks.xyz/api/emoji-image?apikey=apivinz&emoji=${teks}`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 						fs.unlinkSync(ranp)
@@ -1254,7 +1254,7 @@ async function starts() {
 				case 'alay':
 					client.updatePresence(from, Presence.composing) 
 					if (!isUser) return reply(mess.only.daftarB)
-					data = await fetchJson(`https://arugaz.herokuapp.com/api/bapakfont?kata=${body.slice(6)}`)
+					data = await fetchJson(`https://api.zeks.xyz/api/alaymaker?kata=${body.slice(6)}&apikey=apivinz`)
 					reply(data.result)
 					break
 				case 'quotemaker':
@@ -1272,7 +1272,7 @@ async function starts() {
 					if (!isUser) return reply(mess.only.daftarB)
 					teks1 = gh.split("|")[0];
 					teks2 = gh.split("|")[1];
-					data = await fetchJson(`https://tobz-api.herokuapp.com/api/textpro?theme=glitch&text1=${teks1}&text2=${teks2}&apikey=BotWeA`, {method: 'get'})
+					data = await fetchJson(`https://api.zeks.xyz/api/gtext&text1=${teks1}&text2=${teks2}&apikey=apivinz`, {method: 'get'})
 					hasil = await getBuffer(data.result)
 					client.sendMessage(from, hasil, image, {quoted: mek, caption: 'Nih udah jadi..'})
 					break
@@ -1343,7 +1343,6 @@ async function starts() {
 					quran = `${anu.acak.ar.teks}\n\n${anu.acak.id.teks}\nQ.S ${anu.surat.nama} ayat ${anu.acak.id.ayat}`
 					client.sendMessage(from, quran, text, {quoted: mek})
 					break
-					
 				case 'nekonime':
 					data = await fetchJson('https://waifu.pics/api/sfw/neko')
 					if (!isUser) return reply(mess.only.daftarB)
@@ -1682,7 +1681,7 @@ async function starts() {
 					var umure = reg.split("|")[1];
 						user.push(sender)
 						fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
-						client.sendMessage(from, `\`\`\`Pendaftaran berhasil dengan SN: TM08GK8PPHBSJDH10J\`\`\`\n\n\`\`\`Pada ${date} ${time}\`\`\`\n\`\`\`[Nama]: ${jeneng}\`\`\`\n\`\`\`[Nomor]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`[Umur]: ${umure}\`\`\`\n\`\`\`Untuk menggunakan bot\`\`\`\n\`\`\`silahkan\`\`\`\n\`\`\`kirim ${prefix}help\`\`\`\n\`\`\`\nTotal Pengguna ${user.length}\`\`\``, text, {quoted: mek})
+						client.sendMessage(from, `\`\`\`Pendaftaran berhasil dengan SN: TM08GK8PPHBSJDH10J\`\`\`\n\n\`\`\`Pada ${date} ${time}\`\`\`\n\`\`\`[Nama]: ${jeneng}\`\`\`\n\`\`\`[Nomor]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`[Umur]: ${umure}\`\`\`\n\`\`\`Untuk menggunakan bot\`\`\`\n\`\`\`silahkan\`\`\`\n\`\`\`kirim ${prefix}menu\`\`\`\n\`\`\`\nTotal Pengguna ${user.length}\`\`\``, text, {quoted: mek})
 					break
                                case 'welcome':
 					if (!isGroup) return reply(mess.only.group)
@@ -2263,8 +2262,8 @@ async function starts() {
                                         var teks3 = gh.split("|")[2];
                                         if (args.length < 1) return reply('teks, nama, kelas nya mana kak?\nContoh: ${prefix}magernulis teks|nama|kelas\nContoh pemakaian: ${prefix}magernulis I love you|Aine|PKBM')
                                         if (!isUser) return reply(mess.only.daftarB)
-                                        anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/joki-nulis?text=${teks7}&nama=${teks2}&kelas=${teks3}&apiKey=administrator`, {method: 'get'})
-                                        buffer = await getBuffer(anu.result.result)
+                                        anu = await fetchJson(`http://api.zeks.xyz/api/magernulis?nama=${teks7}&kelas=${teks2}&text=${teks3}&tinta=1`, {method: 'get'})
+                                        buffer = await getBuffer(anu.result)
                                         client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih kak...'})
                                         break
                                 case 'pubglogo':
