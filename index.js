@@ -446,6 +446,13 @@ async function starts() {
   					if (!isUser) return reply(mess.only.daftarB)
   					client.sendMessage(from, data, image, {quoted: mek, caption: body.slice(8)})
   					break
+			case 'cloudsky':
+  					client.updatePresence(from, Presence.composing) 
+  					if (!isUser) return reply(mess.only.daftarB)
+  					data = await await getBuffer(`https://arugaz.my.id/api/textpro/cloudsky?text=${body.slice(8)}`)
+  					if (!isUser) return reply(mess.only.daftarB)
+  					client.sendMessage(from, data, image, {quoted: mek, caption: body.slice(8)})
+  					break
 			case 'fml':
   					data = await fetchJson(`https://docs-jojo.herokuapp.com/api/fml`)
   					if (!isUser) return reply(mess.only.daftarB)
