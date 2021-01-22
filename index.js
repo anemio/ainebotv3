@@ -451,7 +451,14 @@ async function starts() {
   					if (!isUser) return reply(mess.only.daftarB)
   					data = await await getBuffer(`https://arugaz.my.id/api/textpro/cloudsky?text=${body.slice(10)}`)
   					if (!isUser) return reply(mess.only.daftarB)
-  					client.sendMessage(from, data, image, {quoted: mek, caption: body.slice(8)})
+  					client.sendMessage(from, data, image, {quoted: mek, caption: body.slice(10)})
+  					break
+			case 'nulis':
+  					client.updatePresence(from, Presence.composing) 
+  					if (!isUser) return reply(mess.only.daftarB)
+  					data = await await getBuffer(`https://api.zeks.xyz/api/nulis?text=${body.slice(5)}&apikey=apivinz`)
+  					if (!isUser) return reply(mess.only.daftarB)
+  					client.sendMessage(from, data, image, {quoted: mek, caption: body.slice(5)})
   					break
 			case 'fml':
   					data = await fetchJson(`https://docs-jojo.herokuapp.com/api/fml`)
@@ -631,8 +638,8 @@ async function starts() {
 						fs.unlinkSync(rano)
 					})
 					break
-				case 'nulis': 
-				case 'tulis':
+				case 'n1235': 
+				case 'njgf':
 					if (args.length < 1) return reply('aku suruh nulis apa kak?')
                                         if (!isUser) return reply(mess.only.daftarB)
 					teks = body.slice(7)
@@ -1637,11 +1644,11 @@ async function starts() {
 					if (!isUser) return reply(mess.only.daftarB)
 					reply(mess.wait)
 					play = body.slice(5)
-					anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=apivinz`)
+					anu = await fetchJson(`https://arugaz.my.id/api/media/ytmus?url=${play}`)
 					if (anu.error) return reply(anu.error)
-					infomp3 = `*Lagu Ditemukan!!!*\nJudul : ${anu.result.title}\nSource : ${anu.result.source}\nUkuran : ${anu.result.size}\n\n*TUNGGU SEBENTAR LAGI DIKIRIM MOHON JANGAN SPAM YA KAK!*`
-					buffer = await getBuffer(anu.result.thumbnail)
-					lagu = await getBuffer(anu.result.url_audio)
+					infomp3 = `*Lagu Ditemukan!!!*\nJudul : ${anu.result.title}\nSource : ${anu.result.filesize}\nUkuran : ${anu.result.filesizef}\n\n*TUNGGU SEBENTAR LAGI DIKIRIM MOHON JANGAN SPAM YA KAK!*`
+					buffer = await getBuffer(anu.result.thumb)
+					lagu = await getBuffer(anu.result.dl_link)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
 					client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
 					break
