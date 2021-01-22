@@ -22,6 +22,8 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}tomp3
   ├─ ❏ ${prefix}bplogo
   ├─ ❏ ${prefix}text3d
+  ├─ ❏ ${prefix}thunder
+  ├─ ❏ ${prefix}cloudsky
   ├─ ❏ ${prefix}quotemaker
   ├─ ❏ ${prefix}magernulis
   ├─ ❏ ${prefix}marvellogo ❌
@@ -60,6 +62,7 @@ const help = (prefix) => {
 ◪ *EDUCATION*
   │
   ├─ ❏ ${prefix}ssweb
+  ├─ ❏ ${prefix}hilih 
   ├─ ❏ ${prefix}wiki
   ├─ ❏ ${prefix}katabijak
   ├─ ❏ ${prefix}pantun
