@@ -11,9 +11,13 @@ wget -O ~/../usr/share/tessdata/ind.traineddata "https://github.com/tesseract-oc
 npm i
 npm audit fix
 npm i imgbb-uploader
+npm audit fix
 npm cache clean -f
+npm audit fix
 npm install --dev
+npm audit fix
 npm i got
+npm audit fix
 
 echo "[*] All dependencies have been installed, please run the command \"npm start\" to immediately start the script"
 echo "Updates : fix Bugs"
