@@ -433,11 +433,15 @@ async function starts() {
   					reply(ez)
   					break
 			case 'text3d':
+  					client.updatePresence(from, Presence.composing) 
+  					if (!isUser) return reply(mess.only.daftarB)
   					data = await await getBuffer(`https://arugaz.my.id/api/textpro/text3d?text=${body.slice(8)}`)
   					if (!isUser) return reply(mess.only.daftarB)
   					client.sendMessage(from, data, image, {quoted: mek, caption: body.slice(8)})
   					break
 			case 'thunder':
+  					client.updatePresence(from, Presence.composing) 
+  					if (!isUser) return reply(mess.only.daftarB)
   					data = await await getBuffer(`https://arugaz.my.id/api/textpro/thundertext?text=${body.slice(8)}`)
   					if (!isUser) return reply(mess.only.daftarB)
   					client.sendMessage(from, data, image, {quoted: mek, caption: body.slice(8)})
@@ -1317,6 +1321,16 @@ async function starts() {
 					anu = await fetchJson(`https://api.zeks.xyz/api/hilihmaker?text=${body.slice(7)}&apikey=apivinz`, {method: 'get'})
 					reply(anu.result)
 					break		
+                               case 'ssweb':
+					client.updatePresence(from, Presence.composing)
+					if (!isUser) return reply(mess.only.daftarB)
+					if (args.length < 1) return reply('Urlnya mana kak?')
+					teks = body.slice(7)
+					reply(mess.wait)
+					anu = await fetchJson(`https://mnazria.herokuapp.com/api/screenshotweb?url=${teks}`)
+					buff = await getBuffer(anu.gambar)
+					client.sendMessage(from, buff, image, {quoted: mek})
+					break
 				case 'quran':
 					anu = await fetchJson(`https://api.banghasan.com/quran/format/json/acak`, {method: 'get'})
 					quran = `${anu.acak.ar.teks}\n\n${anu.acak.id.teks}\nQ.S ${anu.surat.nama} ayat ${anu.acak.id.ayat}`
