@@ -437,6 +437,11 @@ async function starts() {
   					if (!isUser) return reply(mess.only.daftarB)
   					client.sendMessage(from, data, image, {quoted: mek, caption: body.slice(8)})
   					break
+			case 'thunder':
+  					data = await await getBuffer(`https://arugaz.my.id/api/textpro/thundertext?text=${body.slice(8)}`)
+  					if (!isUser) return reply(mess.only.daftarB)
+  					client.sendMessage(from, data, image, {quoted: mek, caption: body.slice(8)})
+  					break
 			case 'fml':
   					data = await fetchJson(`https://docs-jojo.herokuapp.com/api/fml`)
   					if (!isUser) return reply(mess.only.daftarB)
@@ -547,7 +552,7 @@ async function starts() {
 					tels = body.slice(6)	
                                         if (!isUser) return reply(mess.only.daftarB)				
 					anu = await fetchJson(`https://alfians-api.herokuapp.com/api/wiki?q=${tels}`, {method: 'get'})
-					reply(anu.result.extract)
+					reply(anu.result)
 					break	
 			case 'wikien':
 					if (args.length < 1) return reply('masukan kata kunci')
@@ -557,7 +562,7 @@ async function starts() {
 					reply(anu.result)
 					break				
 			case 'ytmp3':
-					if (args.length < 1) return reply('Urlnya mana um?')
+					if (args.length < 1) return reply('Urlnya mana kak?')
 					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
 					anu = await fetchJson(`https://arugaz.my.id/api/media/ytmus?url=${args[0]}`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
@@ -568,7 +573,7 @@ async function starts() {
 					client.sendMessage(from, buffer, audio, {mimetype: 'audio/mp4', filename: `${anu.titleInfo}.mp3`, quoted: mek})
 					break
 			case 'ytmp4':
-					if (args.length < 1) return reply('Urlnya mana um?')
+					if (args.length < 1) return reply('Urlnya mana kak?')
 					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
 					anu = await fetchJson(`https://st4rz.herokuapp.com/api/ytv2?url=${args[0]}`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
@@ -600,7 +605,7 @@ async function starts() {
 					}, 0) // 1000 = 1s,
 					break
 			case 'semoji':
-					if (args.length < 1) return reply('emojinya mana um?')
+					if (args.length < 1) return reply('emojinya mana kak?')
                                         if (!isUser) return reply(mess.only.daftarB)
 					ranp = getRandom('.png')
 					rano = getRandom('.webp')
@@ -708,6 +713,8 @@ async function starts() {
 					client.sendMessage(from, data, image, {quoted: mek, caption: body.slice(7)})
 					break
 				case 'tts':
+				case 'gtts':
+				case 'ts':
 					client.updatePresence(from, Presence.recording) 
 					if (args.length < 1) return client.sendMessage(from, 'Perlu kode bahasa kak?', text, {quoted: mek})
 					if (!isUser) return reply(mess.only.daftarB)
@@ -1022,11 +1029,6 @@ async function starts() {
 					client.blockUser (`${body.slice(7)}@c.us`, "add")
 					client.sendMessage(from, `*Perintah Diterima, Memblockir* ${body.slice(7)}@c.us`, text)
 					break
-				case 'hilih':
-					client.updatePresence(from, Presence.composing) 
-					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/hilih?teks=${body.slice(7)}`, {method: 'get'})
-					reply(anu.result)
-					break
 				case 'tagall':
 					client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
@@ -1308,11 +1310,19 @@ async function starts() {
 					}
 					client.sendMessage(from, options, text, { quoted: mek } )
 					break
+		               case 'hilih': 
+					client.updatePresence(from, Presence.composing)
+					if (!isUser) return reply(mess.only.daftarB)
+					if (args.length < 1) return reply('kasih teks lah^_^!!!')
+					anu = await fetchJson(`https://api.zeks.xyz/api/hilihmaker?text=${body.slice(7)}&apikey=apivinz`, {method: 'get'})
+					reply(anu.result)
+					break		
 				case 'quran':
 					anu = await fetchJson(`https://api.banghasan.com/quran/format/json/acak`, {method: 'get'})
 					quran = `${anu.acak.ar.teks}\n\n${anu.acak.id.teks}\nQ.S ${anu.surat.nama} ayat ${anu.acak.id.ayat}`
 					client.sendMessage(from, quran, text, {quoted: mek})
 					break
+					
 				case 'nekonime':
 					data = await fetchJson('https://waifu.pics/api/sfw/neko')
 					if (!isUser) return reply(mess.only.daftarB)
@@ -1921,13 +1931,14 @@ async function starts() {
 					reply(' *Ketik perintah 1 untuk mengaktifkan, 0 untuk menonaktifkan* \n *Contoh: ${prefix}leveling 1*')
 					}
 					break
-                                case 'infogempa':
-                                        anu = await fetchJson(`https://tobz-api.herokuapp.com/api/infogempa?apikey=BotWeA`, {method: 'get'})
-                                        if (!isUser) return reply(mess.only.daftarB)
-                                        if (anu.error) return reply(anu.error)
-                                        hasil = `*Kedalaman* : ${anu.kedalaman}\n*Koordinat* : ${anu.koordinat}\n*Lokasi* : ${anu.lokasi}\n*Magnitude* : ${anu.magnitude}\n*Map* : ${anu.map}\n*Potensi* : ${anu.potensi}\n*Waktu* : ${anu.waktu}`
-                                        client.sendMessage(from, hasil, text, {quoted:mek})
-                                        break
+                case 'infogempa':
+                   anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/infogempa`, {method: 'get'})
+                   if (!isUser) return reply(mess.only.daftarB)
+                   if (anu.error) return reply(anu.error)
+                   buff = await getBuffer(anu.map)
+                   hasil = `*Potensi*\n${anu.potensi}\n*Lokasi*\n${anu.lokasi}\n*Magnitude*\n${anu.magnitude}\n*Koordinat*\n${anu.koordinat}\n*Kedalaman*\n${anu.kedalaman}\n*Waktu*\n${anu.waktu}\n*Map*\n${anu.map}`
+                   client.sendMessage(from, buff, image, {quoted: mek, caption: hasil})
+                   break
                                 case 'nsfwtrap':
                                         try{
                                                 if (!isNsfw) return reply('❌ *NSFW MATI*')
