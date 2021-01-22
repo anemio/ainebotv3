@@ -665,7 +665,7 @@ async function starts() {
 				case 'info':
 					me = client.user
 					uptime = process.uptime()
-					teks = `*INFO OWNER*\n*Owner bot* : Muhammad Ridwan Reynaldy\n*No Owner* : wa.me/62895330379186\n*Ig owner* : www.instagram.com/anemio999\n━━━━━━━━━━━━━━━━━━━━\n*INFO BOT*\n*Nama bot* : ${me.name}\n*Nomor bot* : @${me.jid.split('@')[0]}\n*Prefix* : ${prefix}\n*Total block contact* : ${blocked.length}\n*The bot is active on* : ${kyun(uptime)}\n*Fans page FB* : https://www.facebook.com/ainneboot\n*Ketik* : ${prefix}lpr _Untuk melaporkan admin bot melalui bot_\n*Ketik* : ${prefix}owner untuk menghubungi admin bot kami.`
+					teks = `*INFO OWNER*\n*Owner bot* : Muhammad Ridwan Reynaldy\n*No Owner* : wa.me/62895330379186\n*Ig owner* : www.instagram.com/anemio999\n━━━━━━━━━━━━━━━━━━━━\n*INFO BOT*\n*Nama bot* : ${me.name}\n*Nomor bot* : @${me.jid.split('@')[0]}\n*Prefix* : ${prefix}\n*Total block contact* : ${blocked}\n*The bot is active on* : ${kyun(uptime)}\n*Fans page FB* : https://www.facebook.com/ainneboot\n*Ketik* : ${prefix}lpr _Untuk melaporkan admin bot melalui bot_\n*Ketik* : ${prefix}owner untuk menghubungi admin bot kami.`
 					buffer = await getBuffer(me.imgUrl)
 					client.sendMessage(from, buffer, image, {caption: teks, contextInfo:{mentionedJid: [me.jid]}})
 					break
@@ -720,7 +720,7 @@ async function starts() {
 				case 'bplogo':
 					if (args.length < 1) return reply(`Masukan Teks\nContoh : ${prefix}bplogo aine`)
 					data = await getBuffer(`https://arugaz.my.id/api/textpro/blackpink?text=${body.slice(7)}`)
-					if (!iUser) return reply(mess.only.daftarB)
+					if (!isUser) return reply(mess.only.daftarB)
 					client.sendMessage(from, data, image, {quoted: mek, caption: body.slice(7)})
 					break
 				case 'tts':
@@ -1806,7 +1806,7 @@ async function starts() {
                                         if (!isUser) return reply(mess.only.daftarB)
 					gatauda = body.slice(8)					
 					anu = await fetchJson(`https://arugaz.my.id/api/random/text/quotes`, {method: 'get'})
-					reply(anu.result.quotes)
+					reply(anu.result.quote)
 					break	 
 				case 'faktaunik':
                                         if (!isUser) return reply(mess.only.daftarB)
