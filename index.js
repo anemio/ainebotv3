@@ -449,7 +449,7 @@ async function starts() {
 			case 'cloudsky':
   					client.updatePresence(from, Presence.composing) 
   					if (!isUser) return reply(mess.only.daftarB)
-  					data = await await getBuffer(`https://arugaz.my.id/api/textpro/cloudsky?text=${body.slice(8)}`)
+  					data = await await getBuffer(`https://arugaz.my.id/api/textpro/cloudsky?text=${body.slice(10)}`)
   					if (!isUser) return reply(mess.only.daftarB)
   					client.sendMessage(from, data, image, {quoted: mek, caption: body.slice(8)})
   					break
